@@ -21,6 +21,8 @@ namespace Chapter_11
                 Console.Write(message[i]);
                 System.Threading.Thread.Sleep(30);
             }
+            // End the message with \n
+            Console.Write(Environment.NewLine);
         }
 
         //Start the game. Duh
