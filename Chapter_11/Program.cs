@@ -116,6 +116,7 @@ namespace Chapter_11
                     Content = File.ReadAllText(DataFile);
                 }
                 Console.WriteLine(Content);
+                Console.ReadKey();
             }
             else if (Choice == 2)
             {
@@ -136,7 +137,7 @@ namespace Chapter_11
                 }
                 else
                 {
-                    ColorText("File not updated.")
+                    ColorText("File not updated.");
                 }
             }
             
