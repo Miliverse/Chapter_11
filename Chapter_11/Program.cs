@@ -29,14 +29,14 @@ namespace Chapter_11
         public static void StartGame()
         {
             Console.ForegroundColor = ConsoleColor.White;
-
+            OpeningLore();
         }
 
         // Text that explains the backstory, starts at the beginning of the game.
         public static void OpeningLore()
         {
             Typewrite("Placeholder");
-
+            Console.ReadLine();
 
         }
 
