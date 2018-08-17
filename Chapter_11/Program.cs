@@ -112,11 +112,12 @@ namespace Chapter_11
                 Console.Clear();
                 if (File.Exists(DataFile))
                 {
-                    ColorText("znznThe File contents are: ");
+                    ColorText("The File contents are: ");
                     Content = File.ReadAllText(DataFile);
                 }
                 Console.WriteLine(Content);
                 Console.ReadKey();
+                Menu();
             }
             else if (Choice == 2)
             {
@@ -134,10 +135,12 @@ namespace Chapter_11
                 {
                     File.WriteAllText(DataFile, Content);
                     ColorText("File updated.");
+                    Menu();
                 }
                 else
                 {
                     ColorText("File not updated.");
+                    Menu();
                 }
             }
             
