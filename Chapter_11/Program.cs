@@ -41,12 +41,10 @@ namespace Chapter_11
 
         }
 
-
-
     }
-    class Program
+    class Program 
     {
-        //I'm not commenting this, figure it out
+        //Starts the program up in full screen or something
         [DllImport("kernel32.dll", ExactSpelling = true)]
 
         private static extern IntPtr GetConsoleWindow();
@@ -62,21 +60,24 @@ namespace Chapter_11
 
         static void Main(string[] args) // program game running thingy. stick stuff you want the program to run at launch in here
         {
-            //I'm not commenting this, figure it out
+            //Relates to earlier code about starting the program in full screen
             Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
             ShowWindow(ThisConsole, MAXIMIZE);
             Game.StartGame(); //Start the game
             ExternalData.Menu();
         }
     }
-    class ExternalData // External Data Reading, I'm going to comment none of this
+    class ExternalData // External Data Reading
     {
+
+        // public things relating to the file reading thing
         public static string DataFile = "data.txt";
         public static string Content = "(Empty File)";
         public static string Input = "";
         public static bool Run = true;
         public static int Choice = 0;
 
+        // Color... text?
         static void ColorText(string Message)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -86,6 +87,7 @@ namespace Chapter_11
 
         }
 
+        // Placeholder thing
         static void Placeholder()
         {
             Console.Title = "Chapter 11 - Save Mode";
@@ -96,6 +98,8 @@ namespace Chapter_11
             }
         }
 
+        // Menu where you select what you what to do relating to a file
+        // will later to change to a save system
         public static void Menu()
         {
             string input = "";
