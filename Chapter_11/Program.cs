@@ -105,6 +105,7 @@ namespace Chapter_11
             string input = "";
             int Choice = 0;
 
+            // Print menu to the screen
             Console.WriteLine("\n\n\n\n\n------------------------------------------");
             Console.WriteLine(" 1) Read Content 2) Update Content 3) Exit");
             Console.WriteLine("------------------------------------------");
