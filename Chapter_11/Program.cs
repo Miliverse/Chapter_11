@@ -28,16 +28,20 @@ namespace Chapter_11
         //Start the game. Duh
         public static void StartGame()
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Title = "Chapter 11";
             OpeningLore();
         }
 
+        
         // Text that explains the backstory, starts at the beginning of the game.
         public static void OpeningLore()
         {
             Typewrite("Placeholder");
-            Console.ReadLine();
+            Console.ReadKey();
+        }
+
+        // Profile creation system, probably
+        public static void ProfileCreation()
+        {
 
         }
 
@@ -63,6 +67,8 @@ namespace Chapter_11
             //Relates to earlier code about starting the program in full screen
             Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
             ShowWindow(ThisConsole, MAXIMIZE);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Title = "Chapter 11";
             Game.StartGame(); //Start the game
             ExternalData.Menu();
         }
@@ -91,7 +97,6 @@ namespace Chapter_11
         static void Placeholder()
         {
             Console.Title = "Chapter 11 - Save Mode";
-
             while (Run == true)
             {
                 Menu();
@@ -109,6 +114,7 @@ namespace Chapter_11
             Console.WriteLine("\n\n\n\n\n------------------------------------------");
             Console.WriteLine(" 1) Read Content 2) Update Content 3) Exit");
             Console.WriteLine("------------------------------------------");
+
 
             Input = Console.ReadLine();
             Choice = Convert.ToInt32(Input);
